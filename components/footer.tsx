@@ -1,98 +1,51 @@
 import Link from "next/link"
-import { Mail, Phone, MapPin, Instagram } from "lucide-react"
+import { Mail, Phone, MapPin, Instagram, Users } from "lucide-react"
 
 export function Footer() {
+  const totalViews = 12540;
+
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Brand */}
+    <footer className="bg-card border-t border-border py-12 lg:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block mb-4">
-              <span className="text-xl font-bold text-primary">KMU OLYMPIC</span>
-            </Link>
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
-              계명대학교 미니올림픽은 16년의 전통을 자랑하는 계명대 대표 체육 행사입니다.
-              세계를 향해 빛을 여는 대학, 계명대학교의 열정과 도전을 함께합니다.
+            <span className="text-2xl font-black text-emerald-600 tracking-tighter block mb-4">KMU OLYMPIC</span>
+            <p className="text-muted-foreground text-sm font-medium leading-relaxed max-w-sm">
+              계명대학교 미니올림픽은 16년의 전통을 자랑하는 대표 체육 행사입니다. 계명대학교의 열정과 도전을 함께합니다.
             </p>
           </div>
-
-          {/* Contact Info */}
           <div>
-            <h3 className="text-foreground font-bold mb-4">연락처</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <Phone className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" />
-                <span>000-000-0000</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <Mail className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" />
-                <span>kmuminiolympic@gmail.com</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <MapPin className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" />
-                <span>대구광역시 달서구 달구벌대로 1095<br />계명대학교 체육대학</span>
-              </li>
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                 <Instagram className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" />
-                  <a
-                  href="https://www.instagram.com/teamgreen_kmu"
-                   target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                    >
-                      팀GREEN 인스타그램
-                    </a>
-              </li>
+            <h3 className="font-bold mb-4">연락처</h3>
+            <ul className="space-y-3 text-sm text-muted-foreground font-medium">
+              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-emerald-600" /> 000-000-0000</li>
+              <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-emerald-600" /> kmuminiolympic@gmail.com</li>
+              <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-emerald-600 mt-1" /> 대구광역시 달서구 계명대학교 체육대학</li>
             </ul>
           </div>
-
-          {/* Quick Links */}
           <div>
-            <h3 className="text-foreground font-bold mb-4">후원사 바로가기</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="https://example.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  A
-                </Link>
-              </li>
-              <li>
-                <Link href="https://example.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  B
-                </Link>
-              </li>
-              <li>
-                <Link href="https://example.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  C
-                </Link>
-              </li>
-              <li>
-                <Link href="https://example.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  D
-                </Link>
-              </li>
-              <li>
-                <Link href="https://www.kmu.ac.kr" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  계명대학교 홈페이지
-                </Link>
-              </li>
-            </ul>
+            <h3 className="font-bold mb-4">Social</h3>
+            <Link href="https://instagram.com/teamgreen_kmu" target="_blank" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-emerald-600 transition-colors">
+              <Instagram className="w-4 h-4 text-emerald-600" /> 팀GREEN 인스타그램
+            </Link>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2026 KMU 미니올림픽 . All rights reserved.
-          </p>
-          <div className="flex items-center gap-6">
-            <Link href="privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              개인정보처리방침
-            </Link>
-            <Link href="terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              이용약관
-            </Link>
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* 왼쪽: 조회수 */}
+          <div className="flex items-center gap-2 bg-emerald-100/50 px-4 py-1.5 rounded-full border border-emerald-100 order-2 md:order-1">
+            <span className="relative flex h-2 w-2"><span className="animate-ping absolute h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span className="relative h-2 w-2 rounded-full bg-emerald-500 block"></span></span>
+            <span className="text-[10px] font-black text-emerald-800 uppercase">Total Views</span>
+            <span className="text-sm font-black text-emerald-600">{totalViews.toLocaleString()}</span>
           </div>
+
+          {/* 중앙: 약관 */}
+          <div className="flex gap-6 text-sm text-muted-foreground font-bold order-3 md:order-2">
+            <Link href="/privacy" className="hover:text-emerald-600">개인정보처리방침</Link>
+            <Link href="/terms" className="hover:text-emerald-600">이용약관</Link>
+          </div>
+
+          {/* 오른쪽: 카피라이트 */}
+          <p className="text-sm text-muted-foreground font-medium order-1 md:order-3">© 2026 KMU 미니올림픽. All rights reserved.</p>
         </div>
       </div>
     </footer>
