@@ -4,7 +4,7 @@ export default function PrivacyPage() {
       <h1 className="text-2xl font-bold">개인정보처리방침</h1>
 
       <p>
-        KMU 미니올림픽 그란페스타(이하 “행사”)는 개인정보 보호를 중요하게 생각하며,
+        KMU 미니올림픽 (이하 “행사”)는 개인정보 보호를 중요하게 생각하며,
         관련 법령을 준수합니다.
       </p>
 

@@ -29,8 +29,7 @@ export function Hero() {
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-foreground leading-tight text-balance">
               미니올림픽
-              <br />
-              <span className="text-primary">그란페스타</span>
+              
             </h1>
             <p className="text-xl lg:text-2xl text-muted-foreground font-medium mt-6">
               세계를 향해 빛을 여는 대학

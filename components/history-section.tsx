@@ -2,7 +2,7 @@ import { Trophy } from "lucide-react"
 
 const historyItems = [
   { year: "2010", event: "제1회 계명대학교 미니올림픽 개최" },
-  { year: "2026", event: "제16회 미니올림픽 그란페스타" },
+  { year: "2025", event: "제15회 미니올림픽 그란페스타" },
 ]
 
 export function HistorySection() {

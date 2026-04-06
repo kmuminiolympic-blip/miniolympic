@@ -1,37 +1,37 @@
-export default function CardNewsPage() {
+export default function BoothPage() {
   const links = [
     {
-      title: "카드뉴스 1",
+      title: "1번 부스",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
     {
-      title: "카드뉴스 2",
+      title: "2번 부스",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
     {
-      title: "카드뉴스 3",
+      title: "3번 부스",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
 	{
-      title: "카드뉴스 4",
+      title: "4번 부스",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
 	{
-      title: "카드뉴스 5",
+      title: "5번 부스",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
 	{
-      title: "카드뉴스 6",
+      title: "6번 부스",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
 	{
-      title: "카드뉴스 7",
+      title: "7번 부스",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
@@ -39,7 +39,7 @@ export default function CardNewsPage() {
 
   return (
     <div className="max-w-5xl mx-auto p-10">
-      <h1 className="text-3xl font-bold mb-8">카드뉴스 모아보기</h1>
+      <h1 className="text-3xl font-bold mb-8">부스 모아보기</h1>
 
       <div className="grid md:grid-cols-3 gap-6">
         {links.map((item, index) => (

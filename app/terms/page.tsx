@@ -4,7 +4,7 @@ export default function TermsPage() {
       <h1 className="text-2xl font-bold">이용약관</h1>
 
       <p>
-        KMU 미니올림픽 그란페스타(이하 “행사”)의 이용약관입니다.
+        KMU 미니올림픽 (이하 “행사”)의 이용약관입니다.
       </p>
 
       <div>

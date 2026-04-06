@@ -32,7 +32,7 @@ export function ScheduleSection() {
                   상시 운영
                 </h3>
                 <p className="text-muted-foreground">
-                  미니올림픽 그란페스타 전 종목 진행
+                  미니올림픽 전 종목 진행
                 </p>
               </div>
             </div>

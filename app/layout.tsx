@@ -11,7 +11,7 @@ const notoSansKr = Noto_Sans_KR({
 
 export const metadata: Metadata = {
   title: 'KMU OLYMPIC',
-  description: '계명대학교 미니올림픽 그란페스타 - 세계를 향해 빛을 여는 대학',
+  description: '계명대학교 미니올림픽 - 세계를 향해 빛을 여는 대학',
   generator: 'v0.app',
   icons: {
     icon: [

@@ -6,15 +6,13 @@ import Link from "next/link"
 const newsItems = [
   {
     id: 1,
-    title: "미니올림픽 카드뉴스",
-    description: "카드뉴스 한 번에 보기",
+    title: "미니올림픽 참가부스",
     image: "/images/팀 GREEN LOGO.png",
-    tag: "카드뉴스",
+    tag: "참가부스",
   },
   {
     id: 2,
-    title: "미니올림픽 기사 스크랩",
-    description: "언론 기사 보러가기",
+    title: "미니올림픽 기사",
     image: "/images/미니올림픽 기사 사진.png",
     link: "https://kmu.ac.kr/uni/kmupr/page.jsp?mnu_uid=287&cmd=2&parm_bod_uid=254193",
     tag: "기사",
@@ -40,12 +38,12 @@ export function NewsSection() {
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {newsItems.map((item) => {
 
-            // 📰 카드뉴스 → 내부 페이지 이동
-            if (item.tag === "카드뉴스") {
+            // 참가부스 → 내부 페이지 이동
+            if (item.tag === "참가부스") {
               return (
                 <Link
                   key={item.id}
-                  href="/cardnews"
+                  href="/booth"
                   className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300"
                 >
                   {/* Image */}

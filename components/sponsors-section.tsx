@@ -41,7 +41,7 @@ export function SponsorsSection() {
             공식 후원사
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            미니올림픽 그란페스타를 함께 만들어가는 소중한 파트너사들입니다
+            미니올림픽을 함께 만들어가는 소중한 파트너사들입니다
           </p>
         </div>
 

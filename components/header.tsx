@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 const navItems = [
   { label: "행사소개", href: "#about" },
   { label: "후원사", href: "#sponsors" },
-  { label: "일정", href: "#schedule" },
   { label: "뉴스", href: "#news" },
 ]
 
@@ -40,13 +39,13 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
-            href="https://docs.google.com/forms/d/11-vFcgZj8DkWU5FUpHP6kFeOP49WgxLXH3VHoCotydM/edit"
-            target="_blank"
-            rel="noopener noreferrer"
+              href="https://docs.google.com/forms/d/11-vFcgZj8DkWU5FUpHP6kFeOP49WgxLXH3VHoCotydM/edit"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-              신청하기
-            </Button>
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
+                신청하기
+              </Button>
             </a>
           </div>
 

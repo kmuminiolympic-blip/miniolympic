@@ -83,7 +83,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2026 KMU 미니올림픽 그란페스타. All rights reserved.
+            © 2026 KMU 미니올림픽 . All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
