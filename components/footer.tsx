@@ -25,12 +25,6 @@ export function Footer() {
               <Instagram className="w-4 h-4 text-emerald-600" /> 팀GREEN 인스타그램
             </Link>
           </div>
-          <div>
-            <h3 className="font-bold mb-4">Social</h3>
-            <Link href="https://instagram.com/teamgreen_kmu" target="_blank" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-emerald-600 transition-colors">
-              <Instagram className="w-4 h-4 text-emerald-600" /> 팀GREEN 인스타그램
-            </Link>
-          </div>
         </div>
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6">
