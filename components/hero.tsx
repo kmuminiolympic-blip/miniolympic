@@ -31,7 +31,7 @@ export function Hero() {
             <p className={`font-bold text-sm lg:text-base tracking-[0.2em] uppercase animate-fade-in ${pointColorText}`}>
               Keimyung University Mini Olympics
             </p>
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-foreground tracking-tighter">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-foreground tracking-tighter">
               미니올림픽
             </h1>
             <p className="text-lg lg:text-xl text-muted-foreground font-medium tracking-tight">
