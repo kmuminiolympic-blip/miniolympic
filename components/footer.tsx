@@ -19,34 +19,36 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold mb-4">연락처</h3>
+            <div className="lg:ml-auto">
+             <h3 className="font-bold mb-4">연락처</h3>
 
-            <div className="space-y-4">
-              <ul className="space-y-3 text-sm text-muted-foreground font-medium">
-                <li className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-emerald-600" />
-                  000-000-0000
-                </li>
-                <li className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-emerald-600" />
-                  kmuminiolympic@gmail.com
-                </li>
-                <li className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-emerald-600 mt-1" />
-                  대구광역시 달서구 계명대학교 체육대학
-                </li>
-              </ul>
-
-              <Link
-                href="https://instagram.com/teamgreen_kmu"
-                target="_blank"
-                className="flex items-center gap-2 text-sm text-muted-foreground font-medium hover:text-emerald-600 transition-colors"
-              >
-                <Instagram className="w-4 h-4 text-emerald-600" />
-                팀GREEN 인스타그램
-              </Link>
-            </div>
-          </div>
+             <div className="space-y-4">
+               <ul className="space-y-3 text-sm text-muted-foreground font-medium">
+                 <li className="flex items-center gap-2">
+                   <Phone className="w-4 h-4 text-emerald-600" />
+                   000-000-0000
+                 </li>
+                 <li className="flex items-center gap-2">
+                   <Mail className="w-4 h-4 text-emerald-600" />
+                   kmuminiolympic@gmail.com
+                 </li>
+                 <li className="flex items-start gap-2">
+                   <MapPin className="w-4 h-4 text-emerald-600 mt-1" />
+                   대구광역시 달서구 계명대학교 체육대학
+                 </li>
+               </ul>
+ 
+               <Link
+                 href="https://instagram.com/teamgreen_kmu"
+                 target="_blank"
+                 className="flex items-center gap-2 text-sm text-muted-foreground font-medium hover:text-emerald-600 transition-colors"
+               >
+                 <Instagram className="w-4 h-4 text-emerald-600" />
+                 팀GREEN 인스타그램
+               </Link>
+             </div>
+           </div>
+         </div>
         </div>
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6">
