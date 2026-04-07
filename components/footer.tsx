@@ -11,7 +11,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <span className="text-2xl font-black text-emerald-600 tracking-tighter block mb-4">KMU OLYMPIC</span>
             <p className="text-muted-foreground text-sm font-medium leading-relaxed max-w-sm">
-              계명대학교 미니올림픽은 16년의 전통을 자랑하는 대표 체육 행사입니다. 계명대학교의 열정과 도전을 함께합니다.
+              계명대학교 미니올림픽은 15년의 전통을 자랑하는 대표 체육 행사입니다. 계명대학교의 열정과 도전을 함께합니다.
             </p>
           </div>
           <div>
@@ -20,6 +20,9 @@ export function Footer() {
               <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-emerald-600" /> 000-000-0000</li>
               <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-emerald-600" /> kmuminiolympic@gmail.com</li>
               <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-emerald-600 mt-1" /> 대구광역시 달서구 계명대학교 체육대학</li>
+              <Link href="https://instagram.com/teamgreen_kmu" target="_blank" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-emerald-600 transition-colors">
+              <Instagram className="w-4 h-4 text-emerald-600" /> 팀GREEN 인스타그램
+            </Link>
             </ul>
           </div>
           <div>
