@@ -26,6 +26,7 @@ export function Footer() {
             </Link>
           </div>
         </div>
+      </div>
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6">
           {/* 왼쪽: 조회수 */}
