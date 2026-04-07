@@ -20,10 +20,10 @@ export function Footer() {
               <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-emerald-600" /> 000-000-0000</li>
               <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-emerald-600" /> kmuminiolympic@gmail.com</li>
               <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-emerald-600 mt-1" /> 대구광역시 달서구 계명대학교 체육대학</li>
-              <Link href="https://instagram.com/teamgreen_kmu" target="_blank" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-emerald-600 transition-colors">
+            </ul>
+            <Link href="https://instagram.com/teamgreen_kmu" target="_blank" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-emerald-600 transition-colors">
               <Instagram className="w-4 h-4 text-emerald-600" /> 팀GREEN 인스타그램
             </Link>
-            </ul>
           </div>
           <div>
             <h3 className="font-bold mb-4">Social</h3>
