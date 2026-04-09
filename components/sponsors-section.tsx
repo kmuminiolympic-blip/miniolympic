@@ -12,7 +12,7 @@ const sponsors = [
   {
     id: 2,
     name: "PCR 053",
-    logo: "/images/sponsors/피씨알.jpg"
+    logo: "/images/sponsors/피씨알.jpg",
     website: "https://www.instagram.com/pcr053",
   },
   {
