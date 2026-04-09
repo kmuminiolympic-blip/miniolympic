@@ -11,9 +11,9 @@ const sponsors = [
   },
   {
     id: 2,
-    name: "후원사 B",
-    logo: "/images/sponsors/sponsor-b.png",
-    website: "https://example.com",
+    name: "PCR 053",
+    logo: "/images/sponsors/PCR.png",
+    website: "https://www.instagram.com/pcr053",
   },
   {
     id: 3,
