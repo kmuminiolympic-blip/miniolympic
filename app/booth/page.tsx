@@ -3,7 +3,7 @@ export default function BoothPage() {
     {
       title: "Team Green",
       url: "https://www.instagram.com/teamgreen_kmu",
-      image: "/images/팀 GREEN LOGO.png",
+      image: "/images/팀그린 마스코트.png",
     },
     {
       title: "Tricker",
