@@ -7,7 +7,7 @@ const eventItems = [
     title: "Team Green",
     description: " 콘홀, 셔플보드 ",
     number: "01",
-    link: "https://example.com/green",
+    link: "https://www.instagram.com/teamgreen_kmu/",
   },
   {
     title: "Tricker",
@@ -34,10 +34,10 @@ const eventItems = [
     link: "https://example.com/green",
   },
   {
-    title: "고투월드컵",
+    title: "GO TO WORLDCUP",
     description: "?",
     number: "06",
-    link: "https://example.com/green",
+    link: "https://www.instagram.com/kmu_goto_wc/",
   },
   {
     title: "Kick & Kick",
