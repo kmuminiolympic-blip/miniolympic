@@ -7,7 +7,7 @@ const newsItems = [
   {
     id: 1,
     title: "미니올림픽 참가부스",
-    image: "/images/팀 GREEN LOGO.png",
+    image: "/images/팀그린 마스코트.png",
     tag: "참가부스",
   },
   {
