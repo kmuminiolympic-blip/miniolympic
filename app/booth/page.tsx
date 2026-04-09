@@ -1,37 +1,37 @@
 export default function BoothPage() {
   const links = [
     {
-      title: "1번 부스",
+      title: "Team Green",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
     {
-      title: "2번 부스",
+      title: "Tricker",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
     {
-      title: "3번 부스",
+      title: "라더즈",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
 	{
-      title: "4번 부스",
+      title: "언볼란스",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
 	{
-      title: "5번 부스",
+      title: "3군단",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
 	{
-      title: "6번 부스",
+      title: "고투월드컵",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
 	{
-      title: "7번 부스",
+      title: "Kick & Kick",
       url: "https://www.instagram.com/teamgreen_kmu",
       image: "/images/팀 GREEN LOGO.png",
     },
