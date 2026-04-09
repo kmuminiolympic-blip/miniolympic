@@ -9,7 +9,7 @@ const pointColorHover = "group-hover:text-emerald-700"; // 호버 시 약간 짙
 export function Hero() {
   const mainMenus = [
     { label: "행사소개", href: "#about", icon: Info },
-    { label: "참가부스", href: "#booths", icon: Users },
+    { label: "참가부스", href: "/booths", icon: Users },
     { label: "후원사", href: "#sponsors", icon: Heart },
     { label: "뉴스", href: "#news", icon: Newspaper },
   ]
