@@ -70,7 +70,6 @@ export function SponsorsSection() {
                   className="object-contain max-h-full w-auto"
                   />
               </div>
-            </div>
 
               {/* Sponsor Name */}
               <span className={`text-sm lg:text-base font-bold text-muted-foreground group-hover:${pointColorText} transition-colors`}>
