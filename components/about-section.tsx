@@ -25,7 +25,7 @@ const eventItems = [
     title: "언볼란스",
     description: "?",
     number: "04",
-    link: "https://example.com/green",
+    link: "https://www.instagram.com/kmu_unballance/",
   },
   {
     title: "3군단",
