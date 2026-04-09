@@ -61,16 +61,16 @@ export function SponsorsSection() {
               className="group relative bg-card border border-border rounded-[2rem] p-6 lg:p-8 hover:border-emerald-500/30 hover:bg-emerald-50/50 transition-all duration-300 flex flex-col items-center justify-center min-h-[180px] lg:min-h-[220px] hover:shadow-xl hover:-translate-y-1"
             >
               {/* 실제 이미지 로고 적용 */}
-              <div className="w-full h-36 lg:h-44 mb-4 transition-all duration-500 group-hover:scale-105">
-                <div className="relative w-full h-full rounded-2xl bg-white p-3 overflow-hidden">
-                  <Image
-                    src={sponsor.logo}
-                    alt={`${sponsor.name} 로고`}
-                    fill
-                    className="object-contain"
-                    />
-                </div>
+              <div className="w-full h-full rounded-2xl bg-white p-3 flex items-center justify-center overflow-hidden">
+                <Image
+                  src={sponsor.logo}
+                  alt={`${sponsor.name} 로고`}
+                  width={180}
+                  height={120}
+                  className="object-contain max-h-full w-auto"
+                  />
               </div>
+            </div>
 
               {/* Sponsor Name */}
               <span className={`text-sm lg:text-base font-bold text-muted-foreground group-hover:${pointColorText} transition-colors`}>
