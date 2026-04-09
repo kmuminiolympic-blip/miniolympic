@@ -26,9 +26,9 @@ export default function BoothPage() {
       image: "/images/팀 GREEN LOGO.png",
     },
 	{
-      title: "고투월드컵",
-      url: "https://www.instagram.com/teamgreen_kmu",
-      image: "/images/팀 GREEN LOGO.png",
+      title: "GO TO WORLDCUP",
+      url: "https://www.instagram.com/kmu_goto_wc/",
+      image: "/images/GO TO WORLDCUP.jpg",
     },
 	{
       title: "Kick & Kick",
