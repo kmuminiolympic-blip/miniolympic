@@ -4,7 +4,7 @@ import { Trophy, Users, Flag, Star, Medal, Target, Flame } from "lucide-react"
 
 const eventItems = [
   {
-    title: "팀GREEN",
+    title: "Team Green",
     description: " 콘홀, 셔플보드 ",
     number: "01",
     link: "https://example.com/green",
