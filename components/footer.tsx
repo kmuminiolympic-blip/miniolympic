@@ -48,7 +48,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-sm text-muted-foreground font-medium hover:text-emerald-600 transition-colors lg:justify-end"
                 >
                   <Instagram className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>팀GREEN 인스타그램</span>
+                  <span>Team Green 인스타그램</span>
                 </Link>
               </div>
             </div>
