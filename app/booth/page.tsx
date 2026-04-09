@@ -17,7 +17,7 @@ export default function BoothPage() {
     },
 	{
       title: "언볼란스",
-      url: "https://www.instagram.com/teamgreen_kmu",
+      url: "https://www.instagram.com/kmu_unballance/",
       image: "/images/팀 GREEN LOGO.png",
     },
 	{
