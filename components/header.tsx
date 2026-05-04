@@ -41,7 +41,7 @@ export function Header() {
           <div className="flex-1 flex justify-center">
             <Link href="/" className="flex items-center">
               <span className="text-lg lg:text-xl font-black text-primary tracking-tighter">
-                KMU OLYMPIC
+                TEAM GREEN
               </span>
             </Link>
           </div>
