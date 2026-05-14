@@ -27,7 +27,7 @@ export function Header() {
     {/* 이미지 컨테이너: 헤더 높이에 맞춰 w-10~12 정도로 설정 */}
     <div className="relative w-20 h-20 lg:w-12 lg:h-12 transition-transform group-hover:scale-105"> 
       <Image
-        src="/images/mini-olympics-logo-배경제거.png" // 경로를 메인 로고와 통일했습니다
+        src="/images/로고누끼.png" // 경로를 메인 로고와 통일했습니다
         alt="KMU OLYMPIC Logo"
         fill
         className="object-contain" // 비율 유지하며 채움
