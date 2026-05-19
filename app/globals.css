@@ -137,7 +137,15 @@
   }
 }
 
+/* ... 기존 globals.css 위에 내용들 ... */
+
+/* 1. 기본 회전 상태 설정 */
 .animate-marquee {
   display: flex !important;
-  animation: marquee 60s linear infinite !important;
+  animation: marquee 60s linear infinite !important; /* 원하시는 속도(초)로 조절 가능 */
+}
+
+/* 2. 🚀 마우스를 올렸을 때 정지시키는 마법의 코드 */
+.animate-marquee:hover {
+  animation-play-state: paused !important;
 }
