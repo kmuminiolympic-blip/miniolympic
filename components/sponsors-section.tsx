@@ -4,17 +4,17 @@ import { ExternalLink } from "lucide-react"
 
 // 11개 공식 후원사 데이터 구성
 const sponsors = [
-  { id: 1, name: "해방피플클럽", logo: "/images/sponsors/sponsor-a.png", website: "https://example.com" },
-  { id: 2, name: "PCR 053", logo: "/images/sponsors/피씨알.jpg", website: "https://www.instagram.com/pcr053" },
-  { id: 3, name: "EARTH,US", logo: "/images/sponsors/sponsor-c.png", website: "https://example.com" },
-  { id: 4, name: "TMT 피자", logo: "/images/sponsors/sponsor-d.png", website: "https://example.com" },
-  { id: 5, name: "후원사 5", logo: "/images/sponsors/sponsor-e.png", website: "https://example.com" },
-  { id: 6, name: "후원사 6", logo: "/images/sponsors/sponsor-f.png", website: "https://example.com" },
-  { id: 7, name: "후원사 7", logo: "/images/sponsors/sponsor-g.png", website: "https://example.com" },
-  { id: 8, name: "후원사 8", logo: "/images/sponsors/sponsor-h.png", website: "https://example.com" },
-  { id: 9, name: "후원사 9", logo: "/images/sponsors/sponsor-i.png", website: "https://example.com" },
-  { id: 10, name: "후원사 10", logo: "/images/sponsors/sponsor-j.png", website: "https://example.com" },
-  { id: 11, name: "후원사 11", logo: "/images/sponsors/sponsor-k.png", website: "https://example.com" },
+  { id: 1, name: "해방피플클럽", logo: "/images/sponsors/sponsor-a.png", website: "https://www.instagram.com/haebang_people_club/" },
+  { id: 2, name: "PCR 053", logo: "/images/sponsors/피씨알.jpg", website: "https://www.instagram.com/pcr053/" },
+  { id: 3, name: "TMT 피자", logo: "/images/sponsors/sponsor-c.png", website: "https://naver.me/xE6RKOw6" },
+  { id: 4, name: "사조 팝콘", logo: "/images/sponsors/sponsor-d.png", website: "https://example.com" },
+  { id: 5, name: "정육회", logo: "/images/sponsors/sponsor-e.png", website: "https://www.instagram.com/yukhoe_jung_kmu/" },
+  { id: 6, name: "수기소금", logo: "/images/sponsors/sponsor-f.png", website: "https://www.instagram.com/sugisogeum.kmu/" },
+  { id: 7, name: "EARTH, US", logo: "/images/sponsors/sponsor-g.png", website: "https://www.instagram.com/earthuskr/" },
+  { id: 8, name: "눈을 담다", logo: "/images/sponsors/sponsor-h.png", website: "https://naver.me/GiaQpMeh" },
+  { id: 9, name: "풍동", logo: "/images/sponsors/sponsor-i.png", website: "https://www.instagram.com/poongdong_kmu/" },
+  { id: 10, name: "닭동가리", logo: "/images/sponsors/sponsor-j.png", website: "https://www.instagram.com/dakdonggari_kmu/" },
+  { id: 11, name: "예스", logo: "/images/sponsors/sponsor-k.png", website: "https://example.com" },
 ]
 
 // 중간에 끊겨서 뚝 끊어지는 현상을 방지하기 위해 배열을 복사하여 연결합니다.
