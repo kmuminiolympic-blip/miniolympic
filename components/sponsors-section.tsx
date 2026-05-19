@@ -2,40 +2,30 @@ import Link from "next/link"
 import Image from "next/image"
 import { ExternalLink } from "lucide-react"
 
+// 11개 공식 후원사 데이터 구성
 const sponsors = [
-  {
-    id: 1,
-    name: "해방피플클럽",
-    logo: "/images/sponsors/sponsor-a.png",
-    website: "https://example.com",
-  },
-  {
-    id: 2,
-    name: "PCR 053",
-    logo: "/images/sponsors/피씨알.jpg",
-    website: "https://www.instagram.com/pcr053",
-  },
-  {
-    id: 3,
-    name: "EARTH,US",
-    logo: "/images/sponsors/sponsor-c.png",
-    website: "https://example.com",
-  },
-  {
-    id: 4,
-    name: "TMT 피자",
-    logo: "/images/sponsors/sponsor-d.png",
-    website: "https://example.com",
-  },
+  { id: 1, name: "해방피플클럽", logo: "/images/sponsors/sponsor-a.png", website: "https://example.com" },
+  { id: 2, name: "PCR 053", logo: "/images/sponsors/피씨알.jpg", website: "https://www.instagram.com/pcr053" },
+  { id: 3, name: "EARTH,US", logo: "/images/sponsors/sponsor-c.png", website: "https://example.com" },
+  { id: 4, name: "TMT 피자", logo: "/images/sponsors/sponsor-d.png", website: "https://example.com" },
+  { id: 5, name: "후원사 5", logo: "/images/sponsors/sponsor-e.png", website: "https://example.com" },
+  { id: 6, name: "후원사 6", logo: "/images/sponsors/sponsor-f.png", website: "https://example.com" },
+  { id: 7, name: "후원사 7", logo: "/images/sponsors/sponsor-g.png", website: "https://example.com" },
+  { id: 8, name: "후원사 8", logo: "/images/sponsors/sponsor-h.png", website: "https://example.com" },
+  { id: 9, name: "후원사 9", logo: "/images/sponsors/sponsor-i.png", website: "https://example.com" },
+  { id: 10, name: "후원사 10", logo: "/images/sponsors/sponsor-j.png", website: "https://example.com" },
+  { id: 11, name: "후원사 11", logo: "/images/sponsors/sponsor-k.png", website: "https://example.com" },
 ]
 
-// 산뜻한 테마 컬러 정의
-const pointColorText = "text-emerald-600";
-const pointColorBg = "bg-emerald-600";
+// 중간에 끊겨서 뚝 끊어지는 현상을 방지하기 위해 배열을 복사하여 연결합니다.
+const doubledSponsors = [...sponsors, ...sponsors]
+
+const pointColorText = "text-emerald-600"
+const pointColorBg = "bg-emerald-600"
 
 export function SponsorsSection() {
   return (
-    <section id="sponsors" className="py-20 lg:py-32 bg-background">
+    <section id="sponsors" className="py-20 lg:py-32 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-12 lg:mb-16 text-center">
@@ -49,39 +39,46 @@ export function SponsorsSection() {
             미니올림픽을 함께 만들어가는 소중한 파트너사들입니다
           </p>
         </div>
+      </div>
 
-        {/* Sponsors Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-          {sponsors.map((sponsor) => (
+      {/* 무한 가로 롤링 슬라이더 영역 */}
+      <div className="relative w-full flex overflow-hidden group/container py-4">
+        {/* - animate-marquee: globals.css에 등록한 롤링 애니메이션 활성화
+          - group-hover/container:[animation-play-state:paused]: 마우스 올리면 일시정지하여 클릭을 편하게 유도
+        */}
+        <div className="flex gap-4 lg:gap-6 animate-marquee whitespace-nowrap w-max group-hover/container:[animation-play-state:paused]">
+          {doubledSponsors.map((sponsor, index) => (
             <Link
-              key={sponsor.id}
+              key={`${sponsor.id}-${index}`}
               href={sponsor.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative bg-card border border-border rounded-[2rem] p-6 lg:p-8 hover:border-emerald-500/30 hover:bg-emerald-50/50 transition-all duration-300 flex flex-col items-center justify-center min-h-[180px] lg:min-h-[220px] hover:shadow-xl hover:-translate-y-1"
+              className="inline-flex flex-col items-center justify-center bg-card border border-border rounded-[2rem] p-6 lg:p-8 hover:border-emerald-500/30 hover:bg-emerald-50/50 transition-all duration-300 min-h-[180px] lg:min-h-[220px] w-[220px] lg:w-[280px] hover:shadow-xl hover:-translate-y-1 select-none"
             >
-              {/* 실제 이미지 로고 적용 */}
-             <div className="relative w-full h-[140px] lg:h-[160px] rounded-3xl overflow-hidden mb-4 transition-all duration-500 group-hover:scale-105">
-               <Image
-                 src={sponsor.logo}
-                 alt={`${sponsor.name} 로고`}
-                 fill
-                 className="object-cover"
-                 />
-             </div>
+              {/* 이미지 로고 (기존 카드 비율 완벽 유지) */}
+              <div className="relative w-full h-[120px] lg:h-[140px] rounded-3xl overflow-hidden mb-4 transition-all duration-500 group-hover:scale-105">
+                <Image
+                  src={sponsor.logo}
+                  alt={`${sponsor.name} 로고`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
-              {/* Sponsor Name */}
-              <span className={`text-sm lg:text-base font-bold text-muted-foreground group-hover:${pointColorText} transition-colors`}>
+              {/* 후원사 이름 */}
+              <span className={`text-sm lg:text-base font-bold text-muted-foreground group-hover:${pointColorText} transition-colors whitespace-normal text-center`}>
                 {sponsor.name}
               </span>
 
-              {/* External Link Icon */}
-              <ExternalLink className={`w-4 h-4 text-muted-foreground/0 group-hover:text-emerald-500 transition-all mt-2 group-hover:opacity-100`} />
+              {/* 외부 링크 아이콘 */}
+              <ExternalLink className="w-4 h-4 text-muted-foreground/0 group-hover:text-emerald-500 transition-all mt-2 group-hover:opacity-100" />
             </Link>
           ))}
         </div>
+      </div>
 
-        {/* CTA (Call To Action) */}
+      {/* CTA (Call To Action) */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mt-16 text-center bg-emerald-50/50 border border-emerald-100 rounded-[2.5rem] py-12 px-6">
           <p className="text-foreground font-bold text-lg mb-6">
             미니올림픽의 후원사가 되어주세요
