@@ -136,6 +136,19 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* 마키 애니메이션 클래스 맵핑 */
+--animate-marquee: marquee 40s linear infinite;
+
+/* 애니메이션 키프레임 정의 */
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
