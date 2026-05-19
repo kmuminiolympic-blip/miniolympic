@@ -4,51 +4,31 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* 전체 배경 / 글자 */
   --background: oklch(0.99 0.01 140);
   --foreground: oklch(0.32 0.05 150);
-
-  /* 카드 / 팝오버 */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.32 0.05 150);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.32 0.05 150);
-
-  /* 포인트 컬러 (기존 주황 -> 어두운 초록) */
   --primary: oklch(0.42 0.09 150);
   --primary-foreground: oklch(0.98 0.01 140);
-
-  /* 보조 색상 */
   --secondary: oklch(0.95 0.02 145);
   --secondary-foreground: oklch(0.32 0.05 150);
-
-  /* muted */
   --muted: oklch(0.96 0.01 145);
   --muted-foreground: oklch(0.48 0.03 150);
-
-  /* accent */
   --accent: oklch(0.93 0.03 145);
   --accent-foreground: oklch(0.35 0.06 150);
-
-  /* destructive */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
-
-  /* 테두리 / 입력 / 링 */
   --border: oklch(0.88 0.01 145);
   --input: oklch(0.92 0.01 145);
   --ring: oklch(0.42 0.09 150);
-
-  /* 차트 */
   --chart-1: oklch(0.52 0.12 150);
   --chart-2: oklch(0.6 0.08 170);
   --chart-3: oklch(0.45 0.06 190);
   --chart-4: oklch(0.7 0.1 120);
   --chart-5: oklch(0.58 0.09 100);
-
   --radius: 0.5rem;
-
-  /* 사이드바 */
   --sidebar: oklch(0.98 0.01 145);
   --sidebar-foreground: oklch(0.32 0.05 150);
   --sidebar-primary: oklch(0.42 0.09 150);
@@ -59,7 +39,6 @@
   --sidebar-ring: oklch(0.42 0.09 150);
 }
 
-/* 다크모드 강제 비활성화 느낌으로 동일 톤 유지 */
 .dark {
   --background: oklch(0.99 0.01 140);
   --foreground: oklch(0.32 0.05 150);
@@ -95,7 +74,6 @@
   --sidebar-ring: oklch(0.42 0.09 150);
 }
 
-/* 🛠️ Tailwind v4에서는 'inline'을 떼고 선언해야 애니메이션이 정상 파싱됩니다. */
 @theme {
   --font-sans: var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
@@ -135,19 +113,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-
-  /* 마키 애니메이션 클래스 맵핑 */
   --animate-marquee: marquee 40s linear infinite;
-
-  /* 애니메이션 키프레임 정의 */
-  @keyframes marquee {
-    from {
-      transform: translateX(0%);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
 }
 
 @layer base {
@@ -162,12 +128,11 @@
   }
 }
 
-/* ⬇️ 배포 서버 빌드 에러 및 파싱 누락 방지용 치트키 코드 (맨 밑에 추가) */
+/* 100% 강제 작동 애니메이션 치트키 */
 @keyframes marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
 }
-
 .animate-marquee {
   animation: marquee 40s linear infinite !important;
 }
