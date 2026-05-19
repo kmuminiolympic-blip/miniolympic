@@ -139,5 +139,5 @@
 
 .animate-marquee {
   display: flex !important;
-  animation: marquee 40s linear infinite !important;
+  animation: marquee 60s linear infinite !important;
 }
