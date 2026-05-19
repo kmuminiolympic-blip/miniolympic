@@ -161,3 +161,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* ⬇️ 배포 서버 빌드 에러 및 파싱 누락 방지용 치트키 코드 (맨 밑에 추가) */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite !important;
+}
