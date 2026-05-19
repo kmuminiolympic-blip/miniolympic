@@ -1,104 +1,143 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ExternalLink } from "lucide-react"
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
-// 11개 공식 후원사 데이터 구성
-const sponsors = [
-  { id: 1, name: "해방피플클럽", logo: "/images/sponsors/sponsor-a.png", website: "https://example.com" },
-  { id: 2, name: "PCR 053", logo: "/images/sponsors/피씨알.jpg", website: "https://www.instagram.com/pcr053" },
-  { id: 3, name: "EARTH,US", logo: "/images/sponsors/sponsor-c.png", website: "https://example.com" },
-  { id: 4, name: "TMT 피자", logo: "/images/sponsors/sponsor-d.png", website: "https://example.com" },
-  { id: 5, name: "후원사 5", logo: "/images/sponsors/sponsor-e.png", website: "https://example.com" },
-  { id: 6, name: "후원사 6", logo: "/images/sponsors/sponsor-f.png", website: "https://example.com" },
-  { id: 7, name: "후원사 7", logo: "/images/sponsors/sponsor-g.png", website: "https://example.com" },
-  { id: 8, name: "후원사 8", logo: "/images/sponsors/sponsor-h.png", website: "https://example.com" },
-  { id: 9, name: "후원사 9", logo: "/images/sponsors/sponsor-i.png", website: "https://example.com" },
-  { id: 10, name: "후원사 10", logo: "/images/sponsors/sponsor-j.png", website: "https://example.com" },
-  { id: 11, name: "후원사 11", logo: "/images/sponsors/sponsor-k.png", website: "https://example.com" },
-]
+@custom-variant dark (&:is(.dark *));
 
-// 끊김 방지를 위해 배열 2번 반복
-const doubledSponsors = [...sponsors, ...sponsors]
+:root {
+  --background: oklch(0.99 0.01 140);
+  --foreground: oklch(0.32 0.05 150);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.32 0.05 150);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.32 0.05 150);
+  --primary: oklch(0.42 0.09 150);
+  --primary-foreground: oklch(0.98 0.01 140);
+  --secondary: oklch(0.95 0.02 145);
+  --secondary-foreground: oklch(0.32 0.05 150);
+  --muted: oklch(0.96 0.01 145);
+  --muted-foreground: oklch(0.48 0.03 150);
+  --accent: oklch(0.93 0.03 145);
+  --accent-foreground: oklch(0.35 0.06 150);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.88 0.01 145);
+  --input: oklch(0.92 0.01 145);
+  --ring: oklch(0.42 0.09 150);
+  --chart-1: oklch(0.52 0.12 150);
+  --chart-2: oklch(0.6 0.08 170);
+  --chart-3: oklch(0.45 0.06 190);
+  --chart-4: oklch(0.7 0.1 120);
+  --chart-5: oklch(0.58 0.09 100);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.98 0.01 145);
+  --sidebar-foreground: oklch(0.32 0.05 150);
+  --sidebar-primary: oklch(0.42 0.09 150);
+  --sidebar-primary-foreground: oklch(0.98 0.01 140);
+  --sidebar-accent: oklch(0.94 0.02 145);
+  --sidebar-accent-foreground: oklch(0.32 0.05 150);
+  --sidebar-border: oklch(0.88 0.01 145);
+  --sidebar-ring: oklch(0.42 0.09 150);
+}
 
-const pointColorText = "text-emerald-600"
-const pointColorBg = "bg-emerald-600"
+.dark {
+  --background: oklch(0.99 0.01 140);
+  --foreground: oklch(0.32 0.05 150);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.32 0.05 150);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.32 0.05 150);
+  --primary: oklch(0.42 0.09 150);
+  --primary-foreground: oklch(0.98 0.01 140);
+  --secondary: oklch(0.95 0.02 145);
+  --secondary-foreground: oklch(0.32 0.05 150);
+  --muted: oklch(0.96 0.01 145);
+  --muted-foreground: oklch(0.48 0.03 150);
+  --accent: oklch(0.93 0.03 145);
+  --accent-foreground: oklch(0.35 0.06 150);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.88 0.01 145);
+  --input: oklch(0.92 0.01 145);
+  --ring: oklch(0.42 0.09 150);
+  --chart-1: oklch(0.52 0.12 150);
+  --chart-2: oklch(0.6 0.08 170);
+  --chart-3: oklch(0.45 0.06 190);
+  --chart-4: oklch(0.7 0.1 120);
+  --chart-5: oklch(0.58 0.09 100);
+  --sidebar: oklch(0.98 0.01 145);
+  --sidebar-foreground: oklch(0.32 0.05 150);
+  --sidebar-primary: oklch(0.42 0.09 150);
+  --sidebar-primary-foreground: oklch(0.98 0.01 140);
+  --sidebar-accent: oklch(0.94 0.02 145);
+  --sidebar-accent-foreground: oklch(0.32 0.05 150);
+  --sidebar-border: oklch(0.88 0.01 145);
+  --sidebar-ring: oklch(0.42 0.09 150);
+}
 
-export function SponsorsSection() {
-  return (
-    <section
-      id="sponsors"
-      className="py-20 lg:py-32 bg-background overflow-hidden"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mb-12 lg:mb-16 text-center">
-          <p
-            className={`${pointColorText} font-semibold text-sm tracking-widest uppercase mb-4`}
-          >
-            Sponsors
-          </p>
+@theme {
+  --font-sans: var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
 
-          <h2 className="text-3xl lg:text-5xl font-black text-foreground mb-4">
-            공식 후원사
-          </h2>
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
 
-          <p className="text-muted-foreground max-w-2xl mx-auto font-medium">
-            미니올림픽을 함께 만들어가는 소중한 파트너사들입니다
-          </p>
-        </div>
-      </div>
+/* 무한 롤링 슬라이더 강제 애니메이션 */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
-      {/* 무한 롤링 슬라이더 */}
-      <div className="relative w-full overflow-hidden py-4 group/container">
-        <div className="flex w-max gap-4 lg:gap-6 animate-marquee group-hover/container:[animation-play-state:paused]">
-          {doubledSponsors.map((sponsor, index) => (
-            <Link
-              key={`${sponsor.id}-${index}`}
-              href={sponsor.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex flex-col items-center justify-center bg-card border border-border rounded-[2rem] p-6 lg:p-8 hover:border-emerald-500/30 hover:bg-emerald-50/50 transition-all duration-300 min-h-[180px] lg:min-h-[220px] w-[220px] lg:w-[280px] hover:shadow-xl hover:-translate-y-1 select-none shrink-0"
-            >
-              {/* 로고 */}
-              <div className="relative w-full h-[120px] lg:h-[140px] rounded-3xl overflow-hidden mb-4 transition-transform duration-500 group-hover:scale-105">
-                <Image
-                  src={sponsor.logo}
-                  alt={`${sponsor.name} 로고`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* 후원사 이름 */}
-              <span className="text-sm lg:text-base font-bold text-muted-foreground group-hover:text-emerald-600 transition-colors whitespace-normal text-center">
-                {sponsor.name}
-              </span>
-
-              {/* 링크 아이콘 */}
-              <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:text-emerald-500 transition-all mt-2" />
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* CTA */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mt-16 text-center bg-emerald-50/50 border border-emerald-100 rounded-[2.5rem] py-12 px-6">
-          <p className="text-foreground font-bold text-lg mb-6">
-            미니올림픽의 후원사가 되어주세요
-          </p>
-
-          <Link
-            href="https://www.instagram.com/teamgreen_kmu"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`inline-flex items-center gap-2 ${pointColorBg} text-white font-bold px-8 py-4 rounded-full hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-200 hover:scale-105`}
-          >
-            후원 문의하기
-            <ExternalLink className="w-4 h-4" />
-          </Link>
-        </div>
-      </div>
-    </section>
-  )
+.animate-marquee {
+  display: flex !important;
+  animation: marquee 40s linear infinite !important;
 }
