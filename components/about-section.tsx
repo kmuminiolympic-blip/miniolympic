@@ -65,7 +65,7 @@ const eventItems = [
   },
   {
     title: "HOLE IN LOVE",
-    description: " ??? ",
+    description: "  ",
     number: "11",
     link: "https://www.instagram.com/kmu_hole_in_love/",
   },
@@ -83,7 +83,7 @@ const eventItems = [
   },
   {
     title: "때리지 마세요",
-    description: " ??? ",
+    description: "  ",
     number: "14",
     link: "no link",
   },
