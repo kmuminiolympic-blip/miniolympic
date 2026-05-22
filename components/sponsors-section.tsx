@@ -56,7 +56,7 @@ export function SponsorsSection() {
               className="inline-flex flex-col items-center justify-center bg-card border border-border rounded-[2rem] p-6 lg:p-8 hover:border-emerald-500/30 hover:bg-emerald-50/50 transition-all duration-300 min-h-[180px] lg:min-h-[220px] w-[220px] lg:w-[280px] hover:shadow-xl hover:-translate-y-1 select-none"
             >
               {/* 이미지 로고 (Contain 속성과 라운드 처리로 이미지 완벽 보호) */}
-              <div className="relative w-full h-[120px] lg:h-[140px] rounded-3xl overflow-hidden mb-4 transition-all duration-500 bg-white p-2 flex items-center justify-center group-hover:scale-105">
+              <div className="relative w-full h-[120px] lg:h-[140px] rounded-[2.5rem] overflow-hidden mb-4 transition-all duration-500 bg-white p-4 flex items-center justify-center group-hover:scale-105">
                 <Image
                   src={sponsor.logo}
                   alt={`${sponsor.name} 로고`}
