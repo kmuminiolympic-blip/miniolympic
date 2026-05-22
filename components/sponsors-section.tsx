@@ -6,13 +6,13 @@ import { ExternalLink } from "lucide-react"
 const sponsors = [
   { id: 1, name: "해방피플클럽", logo: "/images/sponsors/해방피플클럽.jpg", website: "https://www.instagram.com/haebang_people_club/" },
   { id: 2, name: "PCR 053", logo: "/images/sponsors/PCR053.png", website: "https://www.instagram.com/pcr053/" },
-  { id: 3, name: "TMT 피자", logo: "/images/sponsors/sponsor-c.png", website: "https://naver.me/xE6RKOw6" },
-  { id: 4, name: "사조 팝콘", logo: "/images/sponsors/sponsor-d.png", website: "" }, // 링크 제거 완료
+  { id: 3, name: "TMT 피자", logo: "/images/sponsors/TMT 피자.png", website: "https://naver.me/xE6RKOw6" },
+  { id: 4, name: "사조 팝콘", logo: "/images/sponsors/사조팝콘.png", website: "" }, // 링크 제거 완료
   { id: 5, name: "정육회", logo: "/images/sponsors/정육회.jpg", website: "https://www.instagram.com/yukhoe_jung_kmu/" },
   { id: 6, name: "수기소금", logo: "/images/sponsors/수기소금.png", website: "https://www.instagram.com/sugisogeum.kmu/" },
   { id: 7, name: "EARTH, US", logo: "/images/sponsors/EARTH,US.jpg", website: "https://www.instagram.com/earthuskr/" },
-  { id: 8, name: "눈을 담다", logo: "/images/sponsors/sponsor-h.png", website: "https://naver.me/GiaQpMeh" },
-  { id: 9, name: "풍동", logo: "/images/sponsors/sponsor-i.png", website: "https://www.instagram.com/poongdong_kmu/" },
+  { id: 8, name: "눈을 담다", logo: "/images/sponsors/눈을 담다.png", website: "https://naver.me/GiaQpMeh" },
+  { id: 9, name: "풍동", logo: "/images/sponsors/풍동.png", website: "https://www.instagram.com/poongdong_kmu/" },
   { id: 10, name: "닭동가리", logo: "/images/sponsors/닭동가리.png", website: "https://www.instagram.com/dakdonggari_kmu/" },
   { id: 11, name: "예스", logo: "/images/sponsors/yess.jpg", website: "https://www.instagram.com/yess_zerowaste/" },
 ]
