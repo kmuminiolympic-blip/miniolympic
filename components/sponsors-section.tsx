@@ -5,7 +5,7 @@ import { ExternalLink } from "lucide-react"
 // 11개 공식 후원사 데이터 구성
 const sponsors = [
   { id: 1, name: "해방피플클럽", logo: "/images/sponsors/해방피플클럽.jpg", website: "https://www.instagram.com/haebang_people_club/" },
-  { id: 2, name: "PCR 053", logo: "/images/sponsors/PCR053.jpg", website: "https://www.instagram.com/pcr053/" },
+  { id: 2, name: "PCR 053", logo: "/images/sponsors/PCR053.png", website: "https://www.instagram.com/pcr053/" },
   { id: 3, name: "TMT 피자", logo: "/images/sponsors/sponsor-c.png", website: "https://naver.me/xE6RKOw6" },
   { id: 4, name: "사조 팝콘", logo: "/images/sponsors/sponsor-d.png", website: "https://naver.me/xE6RKOw6" },
   { id: 5, name: "정육회", logo: "/images/sponsors/정육회.jpg", website: "https://www.instagram.com/yukhoe_jung_kmu/" },
@@ -55,13 +55,12 @@ export function SponsorsSection() {
               rel="noopener noreferrer"
               className="inline-flex flex-col items-center justify-center bg-card border border-border rounded-[2rem] p-6 lg:p-8 hover:border-emerald-500/30 hover:bg-emerald-50/50 transition-all duration-300 min-h-[180px] lg:min-h-[220px] w-[220px] lg:w-[280px] hover:shadow-xl hover:-translate-y-1 select-none"
             >
-              {/* 이미지 로고 (Contain 속성과 라운드 처리로 이미지 완벽 보호) */}
-              <div className="relative w-full h-[120px] lg:h-[140px] rounded-[2.5rem] overflow-hidden mb-4 transition-all duration-500 bg-white p-4 flex items-center justify-center group-hover:scale-105">
+              {/* 이미지 로고 (contain 속성 적용 및 여백 처리로 이미지 잘림 완벽 방지) */}
+              <div className="relative w-full h-[120px] lg:h-[140px] rounded-3xl overflow-hidden mb-4 transition-all duration-500 group-hover:scale-105 bg-white p-2 flex items-center justify-center">
                 <Image
                   src={sponsor.logo}
                   alt={`${sponsor.name} 로고`}
                   fill
-                  // object-contain으로 원본 비율 유지, background-color로 여백 채움
                   className="object-contain"
                 />
               </div>
