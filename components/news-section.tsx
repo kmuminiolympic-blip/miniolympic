@@ -39,44 +39,42 @@ export function NewsSection() {
           {newsItems.map((item) => {
 
             {/* 1. 참가부스 → 내부 페이지 이동 */}
-if (item.tag === "참가부스") {
-  return (
-    <Link
-      key={item.id}
-      href="/booth"
-      className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300"
-    >
-      {/* 이미지 여백 공간에 은은한 배경색(bg-muted/30) 추가 */}
-      <div className="aspect-video relative overflow-hidden bg-muted/30">
-        <img
-          src={item.image}
-          alt={item.title}
-          {/* object-cover를 object-contain으로 변경하여 이미지 전체가 보이도록 수정 */}
-          className="w-full h-full object-contain group-hover:scale-105 transition"
-          style={{ transform: "scale(0.8)" }} 
-        />
-        <div className="absolute top-4 left-4">
-          <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
-            {item.tag}
-          </span>
-        </div>
-      </div>
+            if (item.tag === "참가부스") {
+              return (
+                <Link
+                  key={item.id}
+                  href="/booth"
+                  className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300"
+                >
+                  <div className="aspect-video relative overflow-hidden bg-muted/30">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-contain group-hover:scale-105 transition"
+                      style={{ transform: "scale(0.8)" }} 
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                        {item.tag}
+                      </span>
+                    </div>
+                  </div>
 
-      {/* Content */}
-      <div className="p-6 flex items-start justify-between">
-        <div>
-          <h3 className="text-xl font-bold mb-2">
-            {item.title}
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            {/* item.description */}
-          </p>
-        </div>
-        <ArrowRight className="w-5 h-5 mt-1 text-muted-foreground group-hover:text-primary transition-colors" />
-      </div>
-    </Link>
-  )
-}
+                  {/* Content */}
+                  <div className="p-6 flex items-start justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {/* item.description */}
+                      </p>
+                    </div>
+                    <ArrowRight className="w-5 h-5 mt-1 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </div>
+                </Link>
+              )
+            }
 
             {/* 2. 기사 → 외부 링크 */}
             return (
@@ -111,7 +109,6 @@ if (item.tag === "참가부스") {
                       {/* item.description */}
                     </p>
                   </div>
-                  {/* 외부 링크용 아이콘 */}
                   <ExternalLink className="w-5 h-5 mt-1 text-muted-foreground group-hover:text-primary transition-colors" />
                 </div>
               </a>
