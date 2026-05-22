@@ -3,14 +3,17 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Mail, Phone, MapPin, Instagram } from "lucide-react"
-import { supabase } from "@/lib/supabase" // 💡 작성하신 lib/supabase.ts 경로에 맞게 수정하세요
+import { supabase } from "@/lib/supabase" // 💡 프로젝트 경로에 맞는지 확인하세요!
 
 export function Footer() {
-  // 기본값은 기존 코드의 12540으로 설정하되, DB에서 값을 가져오면 업데이트됩니다.
-  const [totalViews, setTotalViews] = useState<number>(12540)
+  // 초기 렌더링 동기화를 위해 null로 시작하거나 기본값을 적어줍니다.
+  const [totalViews, setTotalViews] = useState<number | null>(null)
 
   useEffect(() => {
     const handleViews = async () => {
+      // 윈도우 객체가 없으면 실행하지 않음 (서버 사이드 렌더링 에러 방지)
+      if (typeof window === "undefined") return
+
       try {
         // 브라우저 세션을 확인하여 새로고침 시 무한으로 조회수가 올라가는 것을 방지합니다.
         const hasViewed = sessionStorage.getItem("hasViewedMain")
@@ -56,6 +59,8 @@ export function Footer() {
         }
       } catch (error) {
         console.error("조회수 동기화 중 오류 발생:", error)
+        // 에러 발생 시 서비스가 멈추지 않도록 기본값이라도 노출시킵니다.
+        setTotalViews(12540)
       }
     }
 
@@ -124,8 +129,8 @@ export function Footer() {
             <span className="text-[10px] font-black text-emerald-800 uppercase">
               Total Views
             </span>
-            <span className="text-sm font-black text-emerald-600">
-              {totalViews.toLocaleString()}
+            <span className="text-sm font-black text-emerald-600 min-w-[40px] text-center">
+              {totalViews !== null ? totalViews.toLocaleString() : "---"}
             </span>
           </div>
 
