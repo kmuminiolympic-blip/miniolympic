@@ -20,24 +20,46 @@ export default function BoothPage() {
     <div className="max-w-5xl mx-auto p-10">
       <h1 className="text-3xl font-bold mb-8">부스 모아보기</h1>
 
-      {/* 사진을 없앴으므로 grid 열을 3열에서 2~4열로 유연하게 조정 가능합니다 */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {links.map((item, index) => (
-          <a
-            key={index}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center justify-between p-5 border rounded-xl bg-white hover:bg-gray-50 hover:border-gray-400 hover:shadow-md transition dynamic-shadow"
-          >
-            <div className="flex flex-col">
-              <span className="font-semibold text-lg text-gray-800 group-hover:text-black">
-                {item.title}
-              </span>
-              <span className="text-xs text-gray-400 mt-1">Instagram 방문하기 →</span>
-            </div>
-          </a>
-        ))}
+        {links.map((item, index) => {
+          // 링크가 없는지 확인하는 조건문입니다.
+          const hasNoLink = item.url === "no link";
+
+          // 1. 링크가 없는 경우: 클릭할 수 없는 평범한 상자(div)를 보여줍니다.
+          if (hasNoLink) {
+            return (
+              <div
+                key={index}
+                className="flex items-center justify-between p-5 border rounded-xl bg-gray-50 opacity-60 selectors-none cursor-not-allowed"
+              >
+                <div className="flex flex-col">
+                  <span className="font-semibold text-lg text-gray-500">
+                    {item.title}
+                  </span>
+                  <span className="text-xs text-gray-400 mt-1">링크 준비 중 ⏳</span>
+                </div>
+              </div>
+            );
+          }
+
+          // 2. 링크가 있는 경우: 기존처럼 클릭 가능한 링크(a 태그)를 보여줍니다.
+          return (
+            <a
+              key={index}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-5 border rounded-xl bg-white hover:bg-gray-50 hover:border-gray-400 hover:shadow-md transition dynamic-shadow"
+            >
+              <div className="flex flex-col">
+                <span className="font-semibold text-lg text-gray-800 group-hover:text-black">
+                  {item.title}
+                </span>
+                <span className="text-xs text-gray-400 mt-1">Instagram 방문하기 →</span>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </div>
   );
