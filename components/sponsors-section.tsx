@@ -43,9 +43,6 @@ export function SponsorsSection() {
 
       {/* 무한 가로 롤링 슬라이더 영역 */}
       <div className="relative w-full flex overflow-hidden group/container py-4">
-        {/* - animate-marquee: globals.css에 등록한 롤링 애니메이션 활성화
-          - group-hover/container:[animation-play-state:paused]: 마우스 올리면 일시정지하여 클릭을 편하게 유도
-        */}
         <div className="flex gap-4 lg:gap-6 animate-marquee whitespace-nowrap w-max group-hover/container:[animation-play-state:paused]">
           {doubledSponsors.map((sponsor, index) => (
             <Link
@@ -53,10 +50,15 @@ export function SponsorsSection() {
               href={sponsor.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex flex-col items-center justify-center bg-card border border-border rounded-[2rem] p-6 lg:p-8 hover:border-emerald-500/30 hover:bg-emerald-50/50 transition-all duration-300 min-h-[180px] lg:min-h-[220px] w-[220px] lg:w-[280px] hover:shadow-xl hover:-translate-y-1 select-none"
+              className="inline-flex flex-col items-center justify-center bg-card border border-border rounded-[2rem] p-6 lg:p-8 hover:border-emerald-500/30 hover:bg-emerald-50/50 transition-all duration-300 min-h-[180px] lg:min-h-[220px] w-[220px] lg:w-[280px] hover:shadow-xl hover:-translate-y-1 select-none group"
             >
-              {/* 이미지 로고 (contain 속성 적용 및 여백 처리로 이미지 잘림 완벽 방지) */}
-              <div className="relative w-full h-[120px] lg:h-[140px] rounded-3xl overflow-hidden mb-4 transition-all duration-500 group-hover:scale-105 bg-white p-2 flex items-center justify-center">
+              {/* 
+                [핵심 수정 부분]
+                - rounded-3xl: 이미지 가두는 박스를 둥글게 깎음
+                - overflow-hidden: 둥글게 깎인 박스 바깥으로 나가는 흰색/이미지 배경을 잘라버림
+                - bg-white p-2: 박스 배경을 흰색으로 채우고 여백을 줌
+              */}
+              <div className="relative w-full h-[120px] lg:h-[140px] rounded-3xl overflow-hidden mb-4 transition-all duration-500 bg-white p-2 flex items-center justify-center group-hover:scale-105">
                 <Image
                   src={sponsor.logo}
                   alt={`${sponsor.name} 로고`}
