@@ -1,6 +1,6 @@
 "use client"
 
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 const newsItems = [
@@ -38,7 +38,7 @@ export function NewsSection() {
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {newsItems.map((item) => {
 
-            // 참가부스 → 내부 페이지 이동
+            {/* 1. 참가부스 → 내부 페이지 이동 (기사 카드와 디자인 통일) */}
             if (item.tag === "참가부스") {
               return (
                 <Link
@@ -46,8 +46,8 @@ export function NewsSection() {
                   href="/booth"
                   className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300"
                 >
-                  {/* ✨ 수정된 부분: aspect-video를 h-48 w-full로 변경 (더 줄이려면 h-40 사용) */}
-                  <div className="h-48 w-full relative overflow-hidden">
+                  {/* 기사와 동일하게 aspect-video 적용 */}
+                  <div className="aspect-video relative overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -60,20 +60,24 @@ export function NewsSection() {
                     </div>
                   </div>
 
-                  {/* Content */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {/* item.description이 있다면 여기에 출력됩니다 */}
-                    </p>
+                  {/* 기사와 동일하게 flex items-start justify-between 및 아이콘 추가 */}
+                  <div className="p-6 flex items-start justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {/* item.description이 있다면 여기에 출력됩니다 */}
+                      </p>
+                    </div>
+                    {/* 내부 링크용 화살표 아이콘 */}
+                    <ArrowRight className="w-5 h-5 mt-1 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
                 </Link>
               )
             }
 
-            // 📄 기사 → 외부 링크 (기존 비율 유지)
+            {/* 2. 기사 → 외부 링크 */}
             return (
               <a
                 key={item.id}
@@ -106,7 +110,8 @@ export function NewsSection() {
                       {/* item.description */}
                     </p>
                   </div>
-                  <ExternalLink className="w-5 h-5 mt-1" />
+                  {/* 외부 링크용 아이콘 */}
+                  <ExternalLink className="w-5 h-5 mt-1 text-muted-foreground group-hover:text-primary transition-colors" />
                 </div>
               </a>
             )
