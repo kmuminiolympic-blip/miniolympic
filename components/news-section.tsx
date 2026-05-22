@@ -52,8 +52,7 @@ export function NewsSection() {
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition"
-                      {/* ✨ 수정된 부분: 참가부스 이미지에만 style={{ transform: "scale(0.8)" }} 부여 */}
-                      style={{ transform: "scale(0.8)" }}
+                      style={{ transform: "scale(0.8)" }} // 0.8배율 적용 및 문제의 주석 제거
                     />
                     <div className="absolute top-4 left-4">
                       <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
