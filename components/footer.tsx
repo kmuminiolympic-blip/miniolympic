@@ -90,11 +90,6 @@ export function Footer() {
               <div className="space-y-4">
                 <ul className="space-y-3 text-sm text-muted-foreground font-medium">
                   <li className="flex items-center gap-2 lg:justify-end">
-                    <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>010-0000-0000</span>
-                  </li>
-
-                  <li className="flex items-center gap-2 lg:justify-end">
                     <Mail className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>kmuminiolympic@gmail.com</span>
                   </li>
@@ -111,7 +106,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-sm text-muted-foreground font-medium hover:text-emerald-600 transition-colors lg:justify-end"
                 >
                   <Instagram className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>Team Green 인스타그램</span>
+                  <span>팀 Green 인스타그램</span>
                 </Link>
               </div>
             </div>
