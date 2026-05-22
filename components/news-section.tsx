@@ -46,8 +46,8 @@ export function NewsSection() {
                   href="/booth"
                   className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300"
                 >
-                  {/* Image */}
-                  <div className="aspect-video relative overflow-hidden">
+                  {/* ✨ 수정된 부분: aspect-video를 h-48 w-full로 변경 (더 줄이려면 h-40 사용) */}
+                  <div className="h-48 w-full relative overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -66,14 +66,14 @@ export function NewsSection() {
                       {item.title}
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                      {item.description}
+                      {/* item.description이 있다면 여기에 출력됩니다 */}
                     </p>
                   </div>
                 </Link>
               )
             }
 
-            // 📄 기사 → 외부 링크
+            // 📄 기사 → 외부 링크 (기존 비율 유지)
             return (
               <a
                 key={item.id}
@@ -103,7 +103,7 @@ export function NewsSection() {
                       {item.title}
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                      {item.description}
+                      {/* item.description */}
                     </p>
                   </div>
                   <ExternalLink className="w-5 h-5 mt-1" />
