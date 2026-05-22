@@ -7,7 +7,7 @@ const sponsors = [
   { id: 1, name: "해방피플클럽", logo: "/images/sponsors/해방피플클럽.jpg", website: "https://www.instagram.com/haebang_people_club/" },
   { id: 2, name: "PCR 053", logo: "/images/sponsors/PCR053.jpg", website: "https://www.instagram.com/pcr053/" },
   { id: 3, name: "TMT 피자", logo: "/images/sponsors/sponsor-c.png", website: "https://naver.me/xE6RKOw6" },
-  { id: 4, name: "사조 팝콘", logo: "/images/sponsors/sponsor-d.png" },
+  { id: 4, name: "사조 팝콘", logo: "/images/sponsors/sponsor-d.png", website: "https://naver.me/xE6RKOw6" },
   { id: 5, name: "정육회", logo: "/images/sponsors/정육회.jpg", website: "https://www.instagram.com/yukhoe_jung_kmu/" },
   { id: 6, name: "수기소금", logo: "/images/sponsors/수기수금.png", website: "https://www.instagram.com/sugisogeum.kmu/" },
   { id: 7, name: "EARTH, US", logo: "/images/sponsors/EARTH,US.jpg", website: "https://www.instagram.com/earthuskr/" },
