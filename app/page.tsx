@@ -1,6 +1,3 @@
-// 여기에 이 한 줄을 추가하세요!
-export const dynamic = 'force-dynamic';
-
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { AboutSection } from "@/components/about-section"
