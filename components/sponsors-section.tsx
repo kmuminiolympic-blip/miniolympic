@@ -9,7 +9,7 @@ const sponsors = [
   { id: 3, name: "TMT 피자", logo: "/images/sponsors/sponsor-c.png", website: "https://naver.me/xE6RKOw6" },
   { id: 4, name: "사조 팝콘", logo: "/images/sponsors/sponsor-d.png", website: "https://naver.me/xE6RKOw6" },
   { id: 5, name: "정육회", logo: "/images/sponsors/정육회.jpg", website: "https://www.instagram.com/yukhoe_jung_kmu/" },
-  { id: 6, name: "수기소금", logo: "/images/sponsors/수기소금.png", website: "https://www.instagram.com/sugisogeum.kmu/" },
+  { id: 6, name: "수기소금", logo: "/images/sponsors/수기수금.png", website: "https://www.instagram.com/sugisogeum.kmu/" },
   { id: 7, name: "EARTH, US", logo: "/images/sponsors/EARTH,US.jpg", website: "https://www.instagram.com/earthuskr/" },
   { id: 8, name: "눈을 담다", logo: "/images/sponsors/sponsor-h.png", website: "https://naver.me/GiaQpMeh" },
   { id: 9, name: "풍동", logo: "/images/sponsors/sponsor-i.png", website: "https://www.instagram.com/poongdong_kmu/" },
@@ -55,13 +55,13 @@ export function SponsorsSection() {
               rel="noopener noreferrer"
               className="inline-flex flex-col items-center justify-center bg-card border border-border rounded-[2rem] p-6 lg:p-8 hover:border-emerald-500/30 hover:bg-emerald-50/50 transition-all duration-300 min-h-[180px] lg:min-h-[220px] w-[220px] lg:w-[280px] hover:shadow-xl hover:-translate-y-1 select-none"
             >
-              {/* 이미지 로고 (기존 카드 비율 완벽 유지) */}
-              <div className="relative w-full h-[120px] lg:h-[140px] rounded-3xl overflow-hidden mb-4 transition-all duration-500 group-hover:scale-105">
+              {/* 이미지 로고 (contain 속성 적용 및 여백 처리로 이미지 잘림 완벽 방지) */}
+              <div className="relative w-full h-[120px] lg:h-[140px] rounded-3xl overflow-hidden mb-4 transition-all duration-500 group-hover:scale-105 bg-white p-2 flex items-center justify-center">
                 <Image
                   src={sponsor.logo}
                   alt={`${sponsor.name} 로고`}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
 
