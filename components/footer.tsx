@@ -1,8 +1,66 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Mail, Phone, MapPin, Instagram } from "lucide-react"
+import { supabase } from "@/lib/supabase" // 💡 작성하신 lib/supabase.ts 경로에 맞게 수정하세요
 
 export function Footer() {
-  const totalViews = 12540
+  // 기본값은 기존 코드의 12540으로 설정하되, DB에서 값을 가져오면 업데이트됩니다.
+  const [totalViews, setTotalViews] = useState<number>(12540)
+
+  useEffect(() => {
+    const handleViews = async () => {
+      try {
+        // 브라우저 세션을 확인하여 새로고침 시 무한으로 조회수가 올라가는 것을 방지합니다.
+        const hasViewed = sessionStorage.getItem("hasViewedMain")
+
+        if (hasViewed) {
+          // 이미 현재 세션에서 방문한 적이 있다면 조회수 수치만 새로 가져옵니다.
+          const { data, error } = await supabase
+            .from("site_stats")
+            .select("total_views")
+            .eq("id", "main")
+            .single()
+
+          if (error) throw error
+          if (data) setTotalViews(data.total_views)
+          return
+        }
+
+        // --- 처음 방문한 세션일 경우: 조회수 +1 업데이트 진행 ---
+        
+        // 1. 현재 DB에 저장된 실제 조회수 가져오기
+        const { data: currentData, error: fetchError } = await supabase
+          .from("site_stats")
+          .select("total_views")
+          .eq("id", "main")
+          .single()
+
+        if (fetchError) throw fetchError
+
+        if (currentData) {
+          const nextViews = currentData.total_views + 1
+
+          // 2. DB의 조회수를 1 증가시킵니다.
+          const { error: updateError } = await supabase
+            .from("site_stats")
+            .update({ total_views: nextViews })
+            .eq("id", "main")
+
+          if (updateError) throw updateError
+
+          // 3. 증가된 값을 화면에 반영하고 세션 스토리지에 기록합니다.
+          setTotalViews(nextViews)
+          sessionStorage.setItem("hasViewedMain", "true")
+        }
+      } catch (error) {
+        console.error("조회수 동기화 중 오류 발생:", error)
+      }
+    }
+
+    handleViews()
+  }, [])
 
   return (
     <footer className="bg-card border-t border-border py-12 lg:py-16">
