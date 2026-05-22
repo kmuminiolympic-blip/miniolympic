@@ -51,7 +51,7 @@ export function NewsSection() {
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-contain group-hover:scale-105 transition"
-                      style={{ transform: "scale(0.8)" }} 
+                      style={{ transform: "scale(1.1)" }} 
                     />
                     <div className="absolute top-4 left-4">
                       <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
