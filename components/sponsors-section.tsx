@@ -9,7 +9,7 @@ const sponsors = [
   { id: 3, name: "TMT 피자", logo: "/images/sponsors/sponsor-c.png", website: "https://naver.me/xE6RKOw6" },
   { id: 4, name: "사조 팝콘", logo: "/images/sponsors/sponsor-d.png", website: "https://naver.me/xE6RKOw6" },
   { id: 5, name: "정육회", logo: "/images/sponsors/정육회.jpg", website: "https://www.instagram.com/yukhoe_jung_kmu/" },
-  { id: 6, name: "수기소금", logo: "/images/sponsors/수기소금.png", website: "https://www.instagram.com/sugisogeum.kmu/" },
+  { id: 6, name: "수기소금", logo: "/images/sponsors/수기수금.png", website: "https://www.instagram.com/sugisogeum.kmu/" },
   { id: 7, name: "EARTH, US", logo: "/images/sponsors/EARTH,US.jpg", website: "https://www.instagram.com/earthuskr/" },
   { id: 8, name: "눈을 담다", logo: "/images/sponsors/sponsor-h.png", website: "https://naver.me/GiaQpMeh" },
   { id: 9, name: "풍동", logo: "/images/sponsors/sponsor-i.png", website: "https://www.instagram.com/poongdong_kmu/" },
@@ -43,6 +43,9 @@ export function SponsorsSection() {
 
       {/* 무한 가로 롤링 슬라이더 영역 */}
       <div className="relative w-full flex overflow-hidden group/container py-4">
+        {/* - animate-marquee: globals.css에 등록한 롤링 애니메이션 활성화
+          - group-hover/container:[animation-play-state:paused]: 마우스 올리면 일시정지하여 클릭을 편하게 유도
+        */}
         <div className="flex gap-4 lg:gap-6 animate-marquee whitespace-nowrap w-max group-hover/container:[animation-play-state:paused]">
           {doubledSponsors.map((sponsor, index) => (
             <Link
@@ -50,19 +53,15 @@ export function SponsorsSection() {
               href={sponsor.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex flex-col items-center justify-center bg-card border border-border rounded-[2rem] p-6 lg:p-8 hover:border-emerald-500/30 hover:bg-emerald-50/50 transition-all duration-300 min-h-[180px] lg:min-h-[220px] w-[220px] lg:w-[280px] hover:shadow-xl hover:-translate-y-1 select-none group"
+              className="inline-flex flex-col items-center justify-center bg-card border border-border rounded-[2rem] p-6 lg:p-8 hover:border-emerald-500/30 hover:bg-emerald-50/50 transition-all duration-300 min-h-[180px] lg:min-h-[220px] w-[220px] lg:w-[280px] hover:shadow-xl hover:-translate-y-1 select-none"
             >
-              {/* 
-                [핵심 수정 부분]
-                - rounded-3xl: 이미지 가두는 박스를 둥글게 깎음
-                - overflow-hidden: 둥글게 깎인 박스 바깥으로 나가는 흰색/이미지 배경을 잘라버림
-                - bg-white p-2: 박스 배경을 흰색으로 채우고 여백을 줌
-              */}
+              {/* 이미지 로고 (Contain 속성과 라운드 처리로 이미지 완벽 보호) */}
               <div className="relative w-full h-[120px] lg:h-[140px] rounded-3xl overflow-hidden mb-4 transition-all duration-500 bg-white p-2 flex items-center justify-center group-hover:scale-105">
                 <Image
                   src={sponsor.logo}
                   alt={`${sponsor.name} 로고`}
                   fill
+                  // object-contain으로 원본 비율 유지, background-color로 여백 채움
                   className="object-contain"
                 />
               </div>
