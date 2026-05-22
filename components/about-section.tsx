@@ -73,19 +73,16 @@ const eventItems = [
     title: "Tricker",
     description: " ",
     number: "12",
-    link: "no link",
   },
   {
     title: "3군단",
     description: "  ",
     number: "13",
-    link: "no link",
   },
   {
     title: "때리지 마세요",
     description: "  ",
     number: "14",
-    link: "no link",
   },
 ]
 
