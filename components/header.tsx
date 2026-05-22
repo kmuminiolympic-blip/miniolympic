@@ -63,7 +63,7 @@ export function Header() {
 
             <div className="hidden md:block">
               <a
-                href="https://docs.google.com/forms/d/11-vFcgZj8DkWU5FUpHP6kFeOP49WgxLXH3VHoCotydM/edit"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSed5NfaUbJFYTa4xvq5xGAdWKbP20bJKEy0bvu0kucrCXF9NQ/viewform?usp=publish-editor"
                 target="_blank"
                 rel="noopener noreferrer"
               >
